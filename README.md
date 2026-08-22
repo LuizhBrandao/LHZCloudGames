@@ -1,11 +1,11 @@
-# LHZ Cloud Games - Tech Challenge Fase 1
+# LHZ Cloud Games 
 
-Bem-vindo ao repositório do **LHZ Cloud Games**, o projeto desenvolvido para a Fase 1 do Tech Challenge.
+Bem-vindo ao repositório do **LHZ Cloud Games**, o projeto desenvolvido por Luiz Brandão.
 
-## 🎯 Objetivos do Projeto
-O objetivo desta fase é criar uma API REST em **.NET 8** para gerenciar usuários e uma biblioteca de jogos adquiridos. O projeto serve como um MVP (Minimum Viable Product) de uma plataforma de venda de jogos digitais, garantindo a persistência de dados, qualidade de software e boas práticas de desenvolvimento (com testes automatizados e modelagem tática do DDD).
+##  Objetivos do Projeto
+O objetivo desse projeto é criar uma API REST em **.NET 8** para gerenciar usuários e uma biblioteca de jogos adquiridos. O projeto serve como um MVP (Minimum Viable Product) de uma plataforma de venda de jogos digitais, garantindo a persistência de dados, qualidade de software e boas práticas de desenvolvimento (com testes automatizados e modelagem tática do DDD).
 
-## 🚀 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 - **.NET 8** (Minimal APIs)
 - **Entity Framework Core**
 - **Banco de Dados**: PostgreSQL
@@ -13,7 +13,7 @@ O objetivo desta fase é criar uma API REST em **.NET 8** para gerenciar usuári
 - **Testes Unitários**: xUnit + FluentAssertions + Moq
 - **Arquitetura**: Monolito estruturado sob os princípios de Domain-Driven Design (DDD)
 
-## ⚙️ Estrutura da Arquitetura
+##  Estrutura da Arquitetura
 O projeto foi dividido em camadas (DDD):
 - **Domain**: Entidades de negócio (`User`, `Game`, `UserGame`), Regras de validação (senha forte e e-mail) e Interfaces de repositório.
 - **Application**: Casos de uso (`AuthService`, `GameService`) e DTOs de entrada e saída.
@@ -21,11 +21,11 @@ O projeto foi dividido em camadas (DDD):
 - **Api**: Configuração do Swagger, Middleware global para tratamento de exceções e endpoints (Minimal APIs).
 - **Tests**: Testes focados nas validações e regras de negócio (TDD/BDD).
 
-## 📋 Pré-requisitos
+##  Pré-requisitos
 - [.NET 8 SDK](https://dotnet.microsoft.com/pt-br/download/dotnet/8.0)
 - [PostgreSQL](https://www.postgresql.org/download/) rodando localmente (ou via Docker).
 
-## 🛠️ Instruções de Uso e Execução
+##  Instruções de Uso e Execução
 
 ### 1. Clonar o repositório:
 ```bash
@@ -60,7 +60,7 @@ Ao rodar, a API subirá em portas do `localhost` (ex: `http://localhost:5000`).
 Abra seu navegador e acesse a documentação do Swagger:
 - `http://localhost:5000/swagger` (Verifique a porta exata exibida no console após o comando `dotnet run`).
 
-## 🧪 Como rodar os Testes Automatizados
+##  Como rodar os Testes Automatizados
 Para executar a suíte de testes unitários que garantem o funcionamento correto das regras de negócio (ex: validação de senhas com critérios de segurança):
 ```bash
 cd LHZCloudGames/LHZCloudGames.Tests
