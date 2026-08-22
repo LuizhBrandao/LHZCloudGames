@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="LHZCloudGames.Api/LHZCloudGames.Api.csproj" />
+  <Project Path="LHZCloudGames.Application/LHZCloudGames.Application.csproj" />
+  <Project Path="LHZCloudGames.Domain/LHZCloudGames.Domain.csproj" />
+  <Project Path="LHZCloudGames.Infrastructure/LHZCloudGames.Infrastructure.csproj" />
+  <Project Path="LHZCloudGames.Tests/LHZCloudGames.Tests.csproj" />
+</Solution>
