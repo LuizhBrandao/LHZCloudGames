@@ -1,0 +1,58 @@
+# Azure DevOps Pipeline (CI/CD) para FIAP Cloud Games (FCG)
+trigger:
+  branches:
+    include:
+      - main
+
+pr:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  buildConfiguration: 'Release'
+  imageName: 'lhzcloudgames-api'
+
+stages:
+  - stage: CI
+    displayName: 'Etapa de CI - Testes e Validação'
+    jobs:
+      - job: BuildAndTest
+        displayName: 'Compilar e Executar Testes'
+        steps:
+          - task: UseDotNet@2
+            displayName: 'Instalar .NET SDK 10'
+            inputs:
+              packageType: 'sdk'
+              version: '10.0.x'
+
+          - script: dotnet restore LHZCloudGames/LHZCloudGames.slnx
+            displayName: 'Restaurar Pacotes'
+
+          - script: dotnet build LHZCloudGames/LHZCloudGames.slnx --configuration $(buildConfiguration) --no-restore
+            displayName: 'Compilar Solução'
+
+          - script: dotnet test LHZCloudGames/LHZCloudGames.slnx --configuration $(buildConfiguration) --no-build --logger "trx"
+            displayName: 'Executar Testes Unitários'
+
+  - stage: CD
+    displayName: 'Etapa de CD - Build e Publicação Docker'
+    dependsOn: CI
+    condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
+    jobs:
+      - job: DockerBuildAndPush
+        displayName: 'Build e Push da Imagem Docker'
+        steps:
+          - task: Docker@2
+            displayName: 'Build e Push da imagem'
+            inputs:
+              command: 'buildAndPush'
+              containerRegistry: 'DockerRegistryConnection' # Nome do Service Connection configurado no Azure DevOps
+              repository: '$(imageName)'
+              dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
+              tags: |
+                latest
+                $(Build.BuildId)

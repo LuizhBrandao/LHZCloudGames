@@ -1,0 +1,34 @@
+================================================================================
+RELATORIO DE ENTREGA - TECH CHALLENGE FASE 2
+FIAP POS TECH - FIAP CLOUD GAMES (FCG)
+================================================================================
+
+1. IDENTIFICACAO DO GRUPO E INTEGRANTES
+--------------------------------------------------------------------------------
+- Nome do Grupo / Projeto: LHZ Cloud Games (FCG)
+- Participantes e Discord:
+  * Nome: Luiz Henrique Oliveira Brandao | Discord: luizhbrandao
+
+2. LINKS DA ENTREGA
+--------------------------------------------------------------------------------
+- Link do Repositorio (GitHub):
+  https://github.com/LuizhBrandao/LHZCloudGames
+
+- Link da Documentacao Tecnica (README):
+  https://github.com/LuizhBrandao/LHZCloudGames/blob/main/README.md
+
+- Link do Video Demonstrativo (YouTube):
+  [INSERIR O LINK DO VIDEO AQUI]
+
+3. RESUMO DOS REQUISITOS TECNICOS ATENDIDOS
+--------------------------------------------------------------------------------
+[X] 1. Arquitetura Monolito escalavel e desacoplada em camadas DDD (.NET 10).
+[X] 2. Dockerfile multi-stage enxuto (~99MB) e otimizado com usuario nao-root.
+[X] 3. Orquestracao via Docker Compose (API + PostgreSQL + Prometheus + Grafana).
+[X] 4. Monitoramento com Prometheus e dashboard pre-provisionado no Grafana.
+[X] 5. Metricas de aplicacao (/metrics) e integridade (/health) nativas.
+[X] 6. Pipeline de CI (GitHub Actions) com execucao em PR/Commits e testes.
+[X] 7. Pipeline de CD (GitHub Actions) com build, push de imagem e deploy.
+[X] 8. Pipeline alternativa para Azure DevOps (azure-pipelines.yml).
+[X] 9. Guia completo de execucao local e publicacao na nuvem no README.md.
+================================================================================
