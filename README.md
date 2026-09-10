@@ -1,4 +1,4 @@
-# 🎮 LHZ Cloud Games (FCG) - Tech Challenge Fase 2
+#  LHZ Cloud Games (FCG) - Tech Challenge Fase 2
 
 ![.NET](https://img.shields.io/badge/.NET-10.0-512BD4?style=flat&logo=dotnet)
 ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat&logo=docker)
@@ -13,7 +13,7 @@ A **Fase 2** tem como objetivo transformar o MVP da plataforma em um ecossistema
 
 ---
 
-## 📌 Objetivos da Fase 2
+##  Objetivos da Fase 2
 
 1. **Dockerização Otimizada**: Criação de `Dockerfile` multi-stage gerando uma imagem de produção enxuta (~99MB) executando com usuário não-root.
 2. **Orquestração Completa**: `docker-compose.yml` integrando a API, o banco de dados PostgreSQL com persistência de volume e a stack de observabilidade.
@@ -30,7 +30,7 @@ A **Fase 2** tem como objetivo transformar o MVP da plataforma em um ecossistema
 
 ---
 
-## 🏗️ Arquitetura do Sistema
+##  Arquitetura do Sistema
 
 Seguindo as diretrizes da fase, o sistema é estruturado como um **monolito modular** orientado a **Domain-Driven Design (DDD)**, stateless e preparado para escalabilidade horizontal na nuvem:
 
@@ -59,7 +59,7 @@ Seguindo as diretrizes da fase, o sistema é estruturado como um **monolito modu
 
 ---
 
-## 🚀 Como Executar Localmente
+##  Como Executar Localmente
 
 ### Pré-requisitos
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) instalado e em execução.
@@ -83,7 +83,7 @@ Em poucos segundos, todos os 4 serviços estarão operacionais:
 
 ---
 
-## 📊 Observabilidade & Monitoramento
+##  Observabilidade & Monitoramento
 
 A stack de monitoramento foi configurada para validar a saúde e performance da aplicação sob tráfego:
 
@@ -106,7 +106,7 @@ A stack de monitoramento foi configurada para validar a saúde e performance da 
 
 ---
 
-## 🔄 Pipelines de CI/CD (GitHub Actions)
+##  Pipelines de CI/CD (GitHub Actions)
 
 ### 1. Integração Contínua (CI - `ci.yml`)
 - **Gatilhos**: Abertura de Pull Requests para `main` e pushes em branches secundárias.
@@ -127,7 +127,7 @@ A stack de monitoramento foi configurada para validar a saúde e performance da 
 
 ---
 
-## ☁️ Publicação na Cloud
+##  Publicação na Cloud
 
 A aplicação é 100% stateless e utiliza variáveis de ambiente padrão do ASP.NET Core, permitindo publicação em qualquer provedor de nuvem:
 
@@ -150,7 +150,7 @@ A aplicação é 100% stateless e utiliza variáveis de ambiente padrão do ASP.
 
 ---
 
-## 🧪 Como Rodar os Testes Automatizados
+##  Como Rodar os Testes Automatizados
 
 Para executar os testes unitários localmente via linha de comando:
 
@@ -160,7 +160,7 @@ dotnet test LHZCloudGames/LHZCloudGames.slnx
 
 ---
 
-## 📦 Entregáveis da Fase 2
+##  Entregáveis da Fase 2
 
 Conforme os critérios de avaliação:
 - **Código-fonte**: Completo neste repositório.
